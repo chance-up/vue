@@ -3,6 +3,7 @@
     <h1>This is MainPage!</h1>
     <h2>{{ message }}</h2>
     <input type="text" v-model="message" />
+    <button @click="changeMessage">Change Message</button>
   </div>
 </template>
 <script lang="ts">
@@ -16,6 +17,10 @@ export default class MainPage extends Vue {
   }
   mounted() {
     console.log("MainPage  mounted");
+  }
+
+  changeMessage() {
+    this.message = "Hello World!";
   }
 }
 </script>
