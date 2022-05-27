@@ -14,6 +14,11 @@ const routes: Array<RouteConfig> = [
         name: 'directives',
         component: () => import('@/pages/main/directive/DirectiveSamplePage.vue'),
       },
+      {
+        path: '/decorators',
+        name: 'decorators',
+        component: () => import('@/pages/main/decorator/DecoratorSamplePage.vue'),
+      },
     ],
   },
 ];

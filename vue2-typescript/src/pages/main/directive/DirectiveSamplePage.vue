@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>This is Directive Page!</h1>
+    <h1>v-if</h1>
+    <span v-if="show">Hide</span>
+    <span v-else>Show</span>
+
     <h2>{{ message }}</h2>
     <input type="text" v-model="message" />
     <button @click="changeMessage">Change Message</button>

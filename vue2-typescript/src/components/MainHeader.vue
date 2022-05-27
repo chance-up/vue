@@ -3,7 +3,7 @@
     <nav>
       <ul>
         <li><router-link to="/directives">Directive Sample</router-link></li>
-        <li><a href="#news">News</a></li>
+        <li><router-link to="/decorators">Decorator Sample</router-link></li>
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
           <div class="dropdown-content">
