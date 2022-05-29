@@ -17,7 +17,7 @@ const routes: Array<RouteConfig> = [
       {
         path: '/decorators',
         name: 'decorators',
-        component: () => import('@/pages/main/decorator/DecoratorSamplePage.vue'),
+        component: () => import('@/pages/main/class-decorator/DecoratorSamplePage.vue'),
       },
     ],
   },

@@ -1,11 +1,15 @@
 <template>
   <div>
-    <h1>v-if</h1>
-    <span v-if="show">Hide</span>
-    <span v-else>Show</span>
+    <h1>v-text(innerText)</h1>
+    <p v-text="exText"></p>
 
-    <h1>v-html(deprecated)</h1>
-    <span v-html="message"></span>
+    <h1>v-html(innerHtml)</h1>
+    <span v-html="exHtml"></span>
+
+    <h1>v-if, v-else</h1>
+    <span v-if="show">this is v-if="true"</span>
+    <span v-else>this is v-if="false"(v-else)</span>
+    <button @click="toggle()">toggle</button>
 
     <h1>v-bind:html</h1>
     <span v-bind:html="message"></span>
@@ -34,10 +38,24 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class DirectiveSamplePage extends Vue {
+  exText = 'this is exText';
+  show = true;
   message = '';
+  exHtml = "<span style='color:red;'> this is exHtml </span>";
 
+  data() {
+    return {
+      // `hello` will be reactive as it is declared via `data` hook.
+
+      hello: undefined,
+    };
+  }
   changeMessage() {
     this.message = 'Hello World!';
+  }
+
+  toggle() {
+    this.show = !this.show;
   }
 }
 </script>
