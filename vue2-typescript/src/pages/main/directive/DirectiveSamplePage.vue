@@ -10,25 +10,28 @@
     <span v-if="show">this is v-if="true"</span>
     <span v-else>this is v-if="false"(v-else)</span>
     <p />
-    <button @click="toggle()">toggle</button>
+    <button @click="toggleVif()">toggle</button>
 
-    <h1>v-bind:html</h1>
-    <span v-bind:html="message"></span>
-
-    <h1>v-bind:text</h1>
-    <span v-bind:text="message"></span>
-
-    <h1>v-bind:class</h1>
-    <span v-bind:class="{ active: isActive }"></span>
-
-    <h1>v-bind:style</h1>
-    <span v-bind:style="{ color: 'red' }"></span>
-
-    <h1>v-bind:key</h1>
+    <h1>v-for</h1>
     <ul>
-      <li v-for="(item, index) in items" v-bind:key="index">{{ item }}</li>
+      <li v-for="(item, idx) in exList" :key="idx">{{ item }}</li>
     </ul>
 
+    <h1>v-bind:class</h1>
+    <span
+      :class="{
+        active: act == true,
+        deactive: act == false,
+      }"
+      >This is Class binding</span
+    >
+    <p />
+    <button @click="toggleClass()">toggle</button>
+
+    <h1>v-bind:style</h1>
+    <span v-bind:style="{ color: 'red' }"> This is Style Binding</span>
+
+    <h1>v-model</h1>
     <h2>{{ message }}</h2>
     <input type="text" v-model="message" />
     <button @click="changeMessage">Change Message</button>
@@ -43,21 +46,29 @@ export default class DirectiveSamplePage extends Vue {
   show = true;
   message = '';
   exHtml = "<span style='color:red;'> this is exHtml </span>";
+  exList = ['a', 'b', 'c'];
+  act = false;
 
   data() {
-    return {
-      // `hello` will be reactive as it is declared via `data` hook.
-
-      hello: undefined,
-    };
+    return {};
   }
   changeMessage() {
     this.message = 'Hello World!';
   }
 
-  toggle() {
+  toggleVif() {
     this.show = !this.show;
+  }
+  toggleClass() {
+    this.act = !this.act;
   }
 }
 </script>
-<style></style>
+<style scoped>
+.active {
+  color: red;
+}
+.deactive {
+  color: blue;
+}
+</style>

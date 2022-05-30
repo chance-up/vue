@@ -22,7 +22,7 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class MainHeader extends Vue {}
 </script>
-<style>
+<style scoped>
 ul {
   list-style-type: none;
   margin: 0;
