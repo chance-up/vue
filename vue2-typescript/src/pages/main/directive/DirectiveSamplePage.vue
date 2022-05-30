@@ -9,6 +9,7 @@
     <h1>v-if, v-else</h1>
     <span v-if="show">this is v-if="true"</span>
     <span v-else>this is v-if="false"(v-else)</span>
+    <p />
     <button @click="toggle()">toggle</button>
 
     <h1>v-bind:html</h1>
