@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h1>This is ClassComponentSamplePage !</h1>
-    <h2>{{ message }}</h2>
-    <input type="text" v-model="message" />
-    <button @click="changeMessage">Change Message</button>
+    <h1>This is Child!</h1>
+    <h2>{{ propMsg }}</h2>
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class DecoratorSampleComponent extends Vue {}
+export default class DecoratorSampleComponent extends Vue {
+  @Prop() propMsg = '';
+}
 </script>
 <style lang=""></style>
