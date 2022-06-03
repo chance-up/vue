@@ -8,7 +8,7 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Watch } from 'vue-property-decorator';
 import DecoratorSampleComponent from '@/components/DecoratorSampleComponent.vue';
 
 @Component({
@@ -22,6 +22,11 @@ export default class DecoretorSamplePage extends Vue {
 
   changeMessage() {
     this.message = 'Hello World!';
+  }
+
+  @Watch('message')
+  onChangedMessage(v:string){
+    console.log('message changed!',v);
   }
 }
 </script>
