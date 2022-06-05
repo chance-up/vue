@@ -12,6 +12,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class ClassComponentSamplePage extends Vue {
   message = '';
+  test = undefined;
+  test1 = null;
 
   changeMessage() {
     this.message = 'Hello World!';
