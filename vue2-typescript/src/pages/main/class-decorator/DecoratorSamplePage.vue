@@ -3,7 +3,7 @@
     <h1>This is Parent</h1>
     <input type="text" v-model="message" />
     <button @click="changeMessage">Change Message</button>
-    <DecoratorSampleComponent :propMsg="message" :propSyncMessage.sync="syncedMessage" />
+    <DecoratorSampleComponent :propMsg="message" :propSyncMessage.sync="syncedMessage" @sendData="onReceiveData" />
     <h1>{{ syncedMessage }}</h1>
   </div>
 </template>
@@ -25,8 +25,12 @@ export default class DecoretorSamplePage extends Vue {
   }
 
   @Watch('message')
-  onChangedMessage(v:string){
-    console.log('message changed!',v);
+  onChangedMessage(v: string) {
+    console.log('message changed!', v);
+  }
+
+  onReceiveData(newVal: string) {
+    console.log('received data!', newVal);
   }
 }
 </script>
