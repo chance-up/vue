@@ -7,8 +7,8 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import MainHeader from '@/components/MainHeader.vue';
-import MainFooter from '@/components/MainFooter.vue';
+import MainHeader from '@/components/layout/MainHeader.vue';
+import MainFooter from '@/components/layout/MainFooter.vue';
 
 @Component({
   components: { MainHeader, MainFooter },
