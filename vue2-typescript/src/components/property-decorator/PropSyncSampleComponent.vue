@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>{{ propSyncMsg }}</h2>
+    <h4>{{ propSyncMsg }}</h4>
     <v-btn color="primary" @click="test()">change Parent Value</v-btn>
   </div>
 </template>
