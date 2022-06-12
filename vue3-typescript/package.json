@@ -8,6 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/node": "^17.0.42",
+    "eslint": "^8.17.0",
+    "eslint-plugin-vue": "^9.1.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "@rushstack/eslint-patch": "^1.1.0",
+
+    "prettier": "^2.6.2",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15"
   },
