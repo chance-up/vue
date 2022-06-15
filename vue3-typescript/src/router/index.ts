@@ -7,6 +7,13 @@ const router = createRouter({
       path: '/',
       name: 'main',
       component: () => import('@/views/MainView.vue'),
+      children: [
+        {
+          path: '/directive',
+          name: 'directive',
+          component: () => import('@/views/directive/DirectiveView.vue'),
+        },
+      ],
     },
   ],
 });
