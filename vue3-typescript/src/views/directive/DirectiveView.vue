@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-
+//  vue 관련 에러 뜨는거 처리 필요. 라이브러리 문제거나 prettier, eslint문제인듯
 const exText = ref('this is exText');
 const show = ref(true);
 const message = ref('this is v-model Message');
